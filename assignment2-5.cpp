@@ -1,34 +1,25 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
-int main() {
-    int low, high, i;
-    bool isPrime = true;
+int main()
+{
+  int num,i ;
+  int range1, range2;
 
-    cout << "Enter two numbers (intervals): ";
-    cin >> low >> high;
+  cout << "Enter your range : ";
+  cin >> range1 >> range2;
 
-    cout << "\nPrime numbers between " << low << " and " << high << " are: " << endl;
-
-    while (low < high) {
-        isPrime = true;
-        if (low == 0 || low == 1) {
-            isPrime = false;
-        }
-        else {
-            for (i = 2; i <= low / 2; ++i) {
-                if (low % i == 0) {
-                    isPrime = false;
-                    break;
-                }
-            }
-        }
-        
-        if (isPrime)
-            cout << low << " ";
-
-        ++low;
+  for(num=range1; num <= range2; num++)
+  {
+    for(i=2; i< (num/i) ; i++)
+    {
+      if (num% i == 0)
+      break;
     }
-
-    return 0;
+    if ( i == num)
+    cout << num << " This number is prime number\n";
+    else
+    cout << num << " This number is NOT prime number\n";
+  }
 }
