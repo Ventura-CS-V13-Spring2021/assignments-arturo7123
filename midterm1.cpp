@@ -41,14 +41,14 @@ void fileread(void)
    while(infile>>x)
   {
 
-    cout<<"student Name : ",, x ;
+    cout<<"student Name : "<< x ;
   }
  }
 }
-cout<<" The total number of students who has the average > 80 : "<< student count<< "Stidemts" << end1;
-my file.close();
+cout<<"The total number of students who has the average > 80 : "<< studentcount<< "Students" << end1;
+myfile.close();
 }
-int summation ( int n1, int n2)
+int summation (int n1, int n2)
 {
   sum = N1 + N2:
 }

@@ -1,2 +1,2 @@
 language = "cpp"
-run = "clang++-7 -pthread -std=c++17  assignment2-6.cpp"
+run = "clang++-7 -pthread -std=c++17  midterm1.cpp"
