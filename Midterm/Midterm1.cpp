@@ -10,8 +10,11 @@ int sum;
 int studentcount = 0;
 int main ()
 {
+
   fileread();
+
 }
+
 void fileread(void)
 {
   ifstream myfile;
@@ -19,7 +22,7 @@ void fileread(void)
   while(std::getline(infile,line))
 
 {
-  std::istringstream iss (line)
+  std::istringstream iss(line)
   if(count%2==0)
   {
     while(infile>>a>>b)
@@ -31,4 +34,25 @@ void fileread(void)
       if(avg > 80)
       {
         studentcount += 1:
+      }
+  }
+ }else
+ {
+   while(infile>>x)
+  {
+
+    cout<<"student Name : ",, x ;
+  }
+ }
+}
+cout<<" The total number of students who has the average > 80 : "<< student count<< "Stidemts" << end1;
+my file.close();
+}
+int summation ( int n1, int n2)
+{
+  sum = N1 + N2:
+}
+double average(int n1, int n2)
+{
+  avg = sum/2
 }
