@@ -18,14 +18,14 @@ int main()
 
   data.open("numbers.txt") ; // opens files
 
-  srand(time(NUll));
+  srand(time(NULL));
 
   if(data.fail()) // checks file opening
   {
     cout << "File not working!" ;
   }
 
-  for(int l = 0 ; i<n ; i++) // check later to see if correct
+  for(int i = 0 ; i<n ; i++) // check later to see if correct
   {
     prev_num = number ;
     number = getRdnum() ; //generates random through Function
@@ -52,7 +52,7 @@ int getRdnum()
 {
   int num = 0 ;
 
-    for(int i=0,i<10;i++) // loop to generate random numbers
+    for(int i=0;i<10;i++) // loop to generate random numbers
         num = (rand() % 50) + 1 ;
   
   return num ;
@@ -61,7 +61,7 @@ int getRdnum()
 int isGreater(int number , int prev_number)
 {
   if(number > prev_number) //checks to see if great than preceding number or not
-    return 1 :
+    return 1 ;
   else
-  return 1 ;
+    return 0 ;
 }
