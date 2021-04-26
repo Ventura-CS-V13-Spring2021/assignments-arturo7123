@@ -23,3 +23,16 @@ int main()
 	
 	ofstream num ;
 	num.open("question3.txt"); // opening file 
+  	
+	do{
+	
+  num1 = get Rdnum() ; // maybe wrong
+  num2 = get rdnum() ; // gets random numbers
+  num3 = get Rdnum() ;
+
+  cout << "Num_1 : " << num1 << "\n";
+  cout << "num_2 : " << num2 << "\n" ; // maybe mistake here too
+  cout << "Num_3 : " << num3 << "\n" ;
+
+  min = findmin(num1 , num 2 , num3) ; //gets minimun
+  max = findMax(num1 , num2 , num3) ;
