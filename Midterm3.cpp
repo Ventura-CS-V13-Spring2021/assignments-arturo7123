@@ -26,13 +26,43 @@ int main()
   	
 	do{
 	
-  num1 = get Rdnum() ; // maybe wrong
-  num2 = get rdnum() ; // gets random numbers
-  num3 = get Rdnum() ;
+  num1 = getRdnum() ; // maybe wrong
+  num2 = getRdnum() ; // gets random numbers
+  num3 = getRdnum() ;
 
   cout << "Num_1 : " << num1 << "\n";
-  cout << "num_2 : " << num2 << "\n" ; // maybe mistake here too
+  cout << "Num_2 : " << num2 << "\n" ; // maybe mistake here too
   cout << "Num_3 : " << num3 << "\n" ;
 
-  min = findmin(num1 , num 2 , num3) ; //gets minimun
-  max = findMax(num1 , num2 , num3) ;
+  min = findMin(num1 , num2 , num3) ; // gets minimum
+  max = findMax(num1 , num2 , num3) ; // gets maximum
+
+	cout << "\n\nMinimum number : " << min ;
+	cout << "\n\nMaximum number : " << max ;
+	
+	diff = getDifference(max , min) ; // getting difference 
+	cout << "\n\nDifference : " << diff ;
+	
+	cout << "\n\n<------------------------------------------------->\n\n" ;
+	
+	fileWrite(diff , num); // writtng difference to file
+	
+	}while(diff>=3); // Loop that will continue to unless the difference b/w max and min will be less then 3
+	
+	
+	num.close() ; // Closing file
+	
+	return 0 ;
+}
+
+int getRdnum()
+{
+  int num= 0 ;
+
+    for(int i=0;i<10;i++) // loop that generates random numbers
+        num = (rand() % 10) ;
+
+  return num ;
+}
+
+int findMin
