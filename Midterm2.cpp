@@ -18,7 +18,7 @@ int main()
 
   data.open("numbers.txt") ; // opens files
 
-  srand(time(NUUll)); // mistake i think
+  srand(time(NUll));
 
   if(data.fail()) // checks file opening
   {
@@ -35,7 +35,7 @@ int main()
     {
       flag = false ;
     }
-    else if(isgreater(number , prev_num)) // checks to see if number is greater maybe miss
+    else if(isGreater(number , prev_num)) // checks to see if number is greater
     {
       data << number << "\t" ;
     }
@@ -56,4 +56,12 @@ int getRdnum()
         num = (rand() % 50) + 1 ;
   
   return num ;
+}
+
+int isGreater(int number , int prev_number)
+{
+  if(number > prev_number) //checks to see if great than preceding number or not
+    return 1 :
+  else
+  return 1 ;
 }
