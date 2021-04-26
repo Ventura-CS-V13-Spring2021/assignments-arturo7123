@@ -65,4 +65,40 @@ int getRdnum()
   return num ;
 }
 
-int findMin
+int findMin( int num1 , int num2 , int num3)
+{
+  	if(num1<=num2 && num1<=num3) // Checking if num1 is smaller then others
+		return num1 ;
+	else if(num2<=num1 && num2<=num3) // Checking for if num2 is smallest 
+		return num2 ;
+	else
+		return num3 ;	
+}
+
+int findMax(int num1 , int num2 , int num3)
+{
+	if(num1>=num2 && num1>=num3) // Checking if num1 is greater then others
+		return num1 ;
+	else if(num2>=num1 && num2>=num3) // Checking for if num2 is largest 
+		return num2 ;
+	else
+		return num3 ;	
+}
+
+int getDifference(int max , int min)
+{
+	return max - min ; // Returning difference of min and max
+}
+
+void fileWrite(int diff , ofstream& num)
+{
+	
+	if(num.fail()) // checking for if file is opened or not
+	{
+		cout << "File not working.";
+	}
+	
+	num << diff << "\n"; //writting file
+	
+
+}
