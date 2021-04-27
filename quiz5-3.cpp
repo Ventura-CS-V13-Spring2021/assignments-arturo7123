@@ -25,13 +25,13 @@ void printbinary(int num[], int size)
     cout << endl;
 }
 void count0cluster(int bin[], int size)
-  int count = 0
+  int count = 0;
   if(num[0] == 0)
     count++;
 
-  for(inti=1;i<size; ++i){
+  for(int i=1; i<size; ++i){
     if(num[i] == 0 and num[i - 1]!= 0)
     count++;
   }
-cout<<"count of cluster: "<<count;
+cout<<"Count of cluster: "<<count;
 }
