@@ -10,13 +10,12 @@ int main()
 
     //*** Your code
 
-
-    for(int=0:) i<10,i++ ){
+    for(int i=0; i<10;i++ ){
       sum = sum+numbers[i];
-      cout<<"",,numbers[i];
+      cout<<" "<<numbers[i];
     }
     cout<<end1;
-    for(int i =0: i<10; i++){
+    for(int i =0; i<10; i++){
       diff[i] = sum-numbers[i];
-      cout<<''
+      cout<<" "<<diff[i];
     }
