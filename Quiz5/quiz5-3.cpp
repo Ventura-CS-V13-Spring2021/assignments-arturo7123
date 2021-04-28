@@ -38,3 +38,20 @@ void count0cluster(int bin[], int size)
   }
 cout<<"Count of cluster: "<<count;
 }
+
+
+// Fonund the same code as others
+// void count0cluster(int bin[], int size)
+// { int count = 0;
+//   bool chata = true;
+//   for(int i = 0; i<size; i++){
+//       if(bin[i]==0 && chata){
+//           count++;
+//           chata=false;
+//       }
+//       else if(bin[i]==1){
+//           chata = true;
+//       }
+//   }
+//   cout<<"Count of Cluster : " << count;
+// }
