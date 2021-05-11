@@ -1,7 +1,7 @@
 #pragma once
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
-#include "coordinate.h"
+#include "coordinate.hpp"
 
 class Rectangle
 {
