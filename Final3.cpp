@@ -28,43 +28,43 @@ public:
 		class_list = new string[num_classes];
 		for (int i = 0; i < rhs.num_classes; i++)
 			class_list[i] = rhs.class_list[i];
-  {
-    void getUserData()
-    {
-      This->~Student();
-      cout << "Enter the name: ";
-      cin >> name;
-      cout << "Enter the number of classes: ";
-      cin >> num_classes;
-      while (num_classes <= 0)
-      {
-        cout << " Enter a positive number of classes: ";
-        cin >> num_classes;
-      }
-      class_list = new string[num_classes];
-      for (int i = 0; i < num_classes; i++)
-      {
-        cout << " Enter the course name : ";
-        cin >> class_list[i];
-      }
-    }
-    void display()
-    {
-      cout << "Name : " << name;
-      cout << "\nCourses:\n";
-      for (int i = 0; i < num_classes; i++)
-        cout << i + 1 << ". " << class_list[i] << endl;
-    }
-    void reset ()
-    {
-      num_classes = 0;
-      delete [] class_list;
-      class_list = nullptr;
-    }
-    Student operator= (const Student& rhs)
-    {
-      if (this == & rhs)
-        return *this;
+	}
+	void getUserData()
+	{
+		this->~Student();
+		cout << "Enter the name: "; // maybe problem here
+		cin >> name;
+		cout << "Enter the number of classes: ";
+		cin >> num_classes;
+		while (num_classes <= 0)
+		{
+			cout << "Enter a positive number of classes: ";
+			cin >> num_classes;
+		}
+		class_list = new string[num_classes];
+		for (int i = 0; i < num_classes; i++)
+		{
+			cout << "Enter the course name : ";
+			cin >> class_list[i];
+		}
+	}
+	void display()
+	{
+		cout << "Name : " << name;
+		cout << "\nCourses:\n";
+		for (int i = 0; i < num_classes; i++)
+			cout << i + 1 << ". " << class_list[i] << endl;
+	}
+	void reset()
+	{
+		num_classes = 0;
+		delete[] class_list;
+		class_list = nullptr;
+	}
+	Student operator= (const Student& rhs)
+	{
+		if (this == &rhs)
+			return *this;
 		this->~Student();
 		name = rhs.name;
 		num_classes = rhs.num_classes;
@@ -73,13 +73,13 @@ public:
 			class_list[i] = rhs.class_list[i];
 		return *this;
 	}
-  ~Student()
-  {
-      name = "";
-      num_classes = 0;
-      delete[] class_list;
-      class_lst = nullptr;
-  }
+	~Student()
+	{
+		name = "";
+		num_classes = 0;
+		delete[] class_list;
+		class_list = nullptr;
+	}
 };
 int main()
 {
@@ -98,8 +98,4 @@ int main()
 	cout << "\nObject s3: (using assignment operator)\n";
 	Student s3 = s1;
 	s3.display();
-
-	cout << "\nObject s1: (after resetting)\n";
-	s1.reset();
-	s1.display();
 }
