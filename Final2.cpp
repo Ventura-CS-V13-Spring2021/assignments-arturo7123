@@ -4,9 +4,9 @@ using namespace std;
 void sort(int arr[], int sum)
 {
   for (int i = 0; i < num - 1; i++)
-    for (int j = i; j < num; j++)
-      if (arr[i] < arr [j])
-        swap(arr[i], arr[j]);
+		for (int j = i; j < num; j++)
+			if (arr[i] < arr[j])
+				swap(arr[i], arr[j]);
 }
 int main()
 {
