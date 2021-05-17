@@ -32,7 +32,7 @@ public:
     void getUserData()
     {
       This->~Student();
-      cout << "Enter the name: "; //maybe problem here check
+      cout << "Enter the name: ";
       cin >> name;
       cout << "Enter the number of classes: ";
       cin >> num_classes;
@@ -82,4 +82,24 @@ public:
   }
 };
 int main()
-{}
+{
+	Student s1;
+	
+	cout << "Input data using getUserData function\n\n";
+	s1.getUserData();
+	cout << "Your Details are: \n";
+	cout << "\nObject s1: (display)\n";
+	s1.display();
+
+	cout << "\nObject s2: (using copy constructor)\n";
+	Student s2(s1);
+	s2.display();
+
+	cout << "\nObject s3: (using assignment operator)\n";
+	Student s3 = s1;
+	s3.display();
+
+	cout << "\nObject s1: (after resetting)\n";
+	s1.reset();
+	s1.display();
+}
