@@ -51,4 +51,6 @@ public:
     void display()
     {
       cout << "Name : " << name;
+      cout << "\nCourses:\n";
+      for (int i = 0; i < num_classes; i++)
     }
