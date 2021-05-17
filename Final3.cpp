@@ -98,4 +98,8 @@ int main()
 	cout << "\nObject s3: (using assignment operator)\n";
 	Student s3 = s1;
 	s3.display();
+
+	cout << "\nObject s1: (after resetting)\n";
+	s1.reset();
+	s1.display();
 }
