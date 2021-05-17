@@ -28,3 +28,12 @@ public:
 		class_list = new string[num_classes];
 		for (int i = 0; i < rhs.num_classes; i++)
 			class_list[i] = rhs.class_list[i];
+  {
+    void getUserData()
+    {
+      This->~Student();
+      cout<< "enter the name; ';" //maybe problem here check
+      cin>> name;
+      cout<< "Enter the number of classes: ";
+      cin>> num_classes;
+      while (num_classes <= 0)
