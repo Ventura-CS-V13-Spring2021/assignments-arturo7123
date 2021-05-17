@@ -1,7 +1,7 @@
 #include <iostream>
 #include <iomanip>
 using namespace std;
-void sort(int arr[], int sum
+void sort(int arr[], int sum)
 {
   for (int i = 0; i < num - 1; i++)
     for (int j = i; j < num; j++)
@@ -32,7 +32,7 @@ int main()
     {
       count++;
     }
-    cout << setw(4) << right << count << end1;
+    cout << setw(4) << right << count << endl;
     i += (count - 1);
   }
 }
