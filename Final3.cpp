@@ -32,8 +32,23 @@ public:
     void getUserData()
     {
       This->~Student();
-      cout<< "enter the name; ';" //maybe problem here check
-      cin>> name;
-      cout<< "Enter the number of classes: ";
-      cin>> num_classes;
+      cout << "Enter the name: "; //maybe problem here check
+      cin >> name;
+      cout << "Enter the number of classes: ";
+      cin >> num_classes;
       while (num_classes <= 0)
+      {
+        cout << " Enter a positive number of classes: ";
+        cin >> num_classes;
+      }
+      class_list = new string[num_classes];
+      for (int i = 0; i < num_classes; i++)
+      {
+        cout << " Enter the course name : ";
+        cin >> class_list[i];
+      }
+    }
+    void display()
+    {
+      cout << "Name : " << name;
+    }
