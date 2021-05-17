@@ -53,4 +53,33 @@ public:
       cout << "Name : " << name;
       cout << "\nCourses:\n";
       for (int i = 0; i < num_classes; i++)
+        cout << i + 1 << ". " << class_list[i] << endl;
     }
+    void reset ()
+    {
+      num_classes = 0;
+      delete [] class_list;
+      class_list = nullptr;
+    }
+    Student operator= (const Student& rhs)
+    {
+      if (this == & rhs)
+        return *this;
+		this->~Student();
+		name = rhs.name;
+		num_classes = rhs.num_classes;
+		class_list = new string[num_classes];
+		for (int i = 0; i < rhs.num_classes; i++)
+			class_list[i] = rhs.class_list[i];
+		return *this;
+	}
+  ~Student()
+  {
+      name = "";
+      num_classes = 0;
+      delete[] class_list;
+      class_lst = nullptr;
+  }
+};
+int main()
+{}
